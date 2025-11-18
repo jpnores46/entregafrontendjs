@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Tienda</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <h1 class="logo">Mi Tienda de Vinos</h1>
+      <nav class="nav">
+        <a href="#productos">Productos</a>
+        <a href="#reseñas">Reseñas</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h2>Bienvenido a Mi Tienda</h2>
+    <p>Productos seleccionados y opiniones reales.</p>
+  </section>
+
+  <section id="productos" class="productos">
+    <h2>Productos</h2>
+    <div class="productos-container">
+
+      <div class="producto-card">
+        <div class="img-wrapper">
+          <img src="img/1.jpg" alt="Producto 1" />
+        </div>
+        <h3>Fond de Cave Reserva</h3>
+        <p>se caracteriza por su crianza en roble. Estos vinos, como el Malbec y el Cabernet Franc, suelen destacar por
+          sus notas de frutas negras, especias y toques de humo, vainilla y chocolate. Son vinos complejos y
+          estructurados, con un final largo y aterciopelado, recomendados para maridar con carnes asadas.</p>
+        <button>Comprar</button>
+      </div>
+
+      <div class="producto-card">
+        <div class="img-wrapper">
+          <img src="img/2.jpg" alt="Producto 2" />
+        </div>
+        <h3>La Linda Malbec</h3>
+        <p>La Linda Malbec es un vino tinto argentino producido por Luigi Bosca, conocido por ser vibrante, frutado y
+          con buena relación precio-calidad. Presenta un color rojo violáceo brillante, con aromas a frutos rojos como
+          cereza y ciruela, y notas especiadas y florales. Es un vino de cuerpo medio, fácil de beber, fresco, con
+          taninos suaves y un final agradable, ideal para acompañar carnes rojas, pastas y quesos. </p>
+        <button>Comprar</button>
+      </div>
+
+      <div class="producto-card">
+        <div class="img-wrapper">
+          <img src="img/3.jpg" alt="Producto 3" />
+        </div>
+        <h3>Luigi Bosca Cabernet Sauvignon</h3>
+        <p>El Luigi Bosca Cabernet Sauvignon se caracteriza por su intenso color rubí brillante, sus aromas complejos a
+          frutos negros, especias y cedro, y su sabor equilibrado y elegante en boca. En el paladar, presenta taninos
+          finos y firmes, buena estructura y cuerpo compacto, con un final largo y persistente con toques ahumados de su
+          crianza en roble. </p>
+        <button>Comprar</button>
+      </div>
+
+      <div class="producto-card">
+        <div class="img-wrapper">
+          <img src="img/4.jpg" alt="Producto 4" />
+        </div>
+        <h3>Luigi Bosca Malbec</h3>
+        <p>El Luigi Bosca Malbec se caracteriza por su color violáceo brillante, sus aromas a frutas rojas (cereza,
+          ciruela) y especias dulces (con notas de café en algunas añadas), y su sabor en boca es fluido, expresivo y
+          con taninos suaves. Es un vino de buen cuerpo, final nítido y crianza totalmente integrada, con buen potencial
+          de guarda. .</p>
+        <button>Comprar</button>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="reseñas" class="reseñas">
+    <h2>Reseñas</h2>
+    <div class="reseñas-grid">
+      <div class="reseña">
+        <p>"Excelente calidad dan ganas de salir a reprimir"</p>
+        <footer>— Patricia</footer>
+      </div>
+      <div class="reseña">
+        <p>"Muy satisfecho..."</p>
+        <footer>— Fidel</footer>
+      </div>
+      <div class="reseña">
+        <p>"Recomiendo esta tienda..."</p>
+        <footer>— Ofelia</footer>
+      </div>
+      <div class="reseña">
+        <p>"Buena relación calidad-precio."</p>
+        <footer>— Fermín</footer>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="contacto">
+    <div class="contacto-left">
+      <h2>Contacto</h2>
+      <p>Si tenés preguntas, escribinos.</p>
+      <h3>Beneficios de un buen vino</h3>
+      <p>Un buen vino es aquel que es equilibrado, con una combinación armónica de sabor, aroma y estructura, como
+        frutas, acidez, taninos y alcohol, que no sobresalen uno sobre otro. También debe tener aromas complejos y
+        agradables, como frutas, flores o especias, y estar bien elaborado con un origen claro y control de calidad.
+        La limpidez y la persistencia de sus sabores son otros indicadores de calidad.</p>
+    </div>
+
+    <form class="contacto-form" onsubmit="return validarFormulario(event)">
+      <label for="nombre">Nombre</label>
+      <input id="nombre" type="text" required />
+
+      <label for="email">Correo electrónico</label>
+      <input id="email" type="email" required />
+
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" rows="5" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>© 2025 Mi Tienda de Vinos. Todos los derechos reservados.</p>
+      <div class="footer-links">
+        <a href="#">Política de privacidad</a>
+        <a href="#">Términos</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

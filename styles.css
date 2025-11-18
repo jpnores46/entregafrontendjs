@@ -1,0 +1,279 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f5f5f5;
+    color: #222;
+    line-height: 1.6
+}
+
+/* HEADER */
+.header {
+    background: #0b1020;
+    color: #fff;
+    padding: 20px 0;
+    margin-bottom: 40px
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700
+}
+
+.nav a {
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 70px 20px;
+    background: white;
+    margin-bottom: 30px
+}
+
+.hero h2 {
+    font-size: 32px;
+    margin-bottom: 10px
+}
+
+.hero p {
+    color: #555;
+    font-size: 18px
+}
+
+/* PRODUCTOS */
+.productos {
+    max-width: 1100px;
+    margin: auto;
+    margin-bottom: 60px
+}
+
+.productos h2 {
+    font-size: 26px;
+    margin-bottom: 25px
+}
+
+.productos-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap
+}
+
+.producto-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+    padding: 18px;
+    width: calc(25% - 20px);
+    transition: .3s
+}
+
+.producto-card:hover {
+    transform: translateY(-4px)
+}
+
+.img-wrapper {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background: #fff
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain
+}
+
+.producto-card h3 {
+    margin: 10px 0 5px
+}
+
+.producto-card p {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 15px
+}
+
+.producto-card button {
+    background: #5a2be6;
+    color: white;
+    border: 0;
+    padding: 8px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px
+}
+
+/* RESEÑAS */
+.reseñas {
+    max-width: 1100px;
+    margin: auto;
+    margin-bottom: 60px
+}
+
+.reseñas h2 {
+    font-size: 26px;
+    margin-bottom: 25px
+}
+
+.reseñas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px
+}
+
+.reseña {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+    position: relative
+}
+
+.reseña::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    bottom: 10px;
+    width: 4px;
+    background: #5a2be6;
+    border-radius: 4px
+}
+
+.reseña footer {
+    margin-top: 20px;
+    font-weight: 700;
+    background: #0b1020;
+    color: white;
+    padding: 10px;
+    border-radius: 6px
+}
+
+/* CONTACTO */
+.contacto {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    gap: 40px;
+    margin-bottom: 60px
+}
+
+.contacto-left {
+    flex: 1
+}
+
+.contacto-left h2 {
+    font-size: 26px;
+    margin-bottom: 10px
+}
+
+.contacto-left h3 {
+    margin-top: 15px;
+    margin-bottom: 10px
+}
+
+.contacto-form {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.contacto-form input,
+.contacto-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px
+}
+
+.contacto-form button {
+    background: #5a2be6;
+    color: white;
+    border: 0;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer
+}
+
+/* FOOTER */
+.footer {
+    background: #0b1020;
+    color: white;
+    padding: 25px 0;
+    margin-top: 40px
+}
+
+.footer-inner {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px
+}
+
+/* RESPONSIVE */
+@media(max-width:900px) {
+    .producto-card {
+        width: calc(50% - 20px)
+    }
+
+    .reseñas-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@media(max-width:700px) {
+    .contacto {
+        flex-direction: column
+    }
+
+    .contacto-form {
+        width: 100%
+    }
+}
+
+@media(max-width:480px) {
+    .producto-card {
+        width: 100%
+    }
+
+    .reseñas-grid {
+        grid-template-columns: 1fr
+    }
+}
