@@ -91,19 +91,24 @@ body {
 }
 
 .img-wrapper {
-    width: 100%;
-    height: 220px;
-    overflow: hidden;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    background: #fff
-}
-
-.img-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain
-}
+    width: 100% !important;
+    height: 300px !important;
+    padding: 0 !important;
+    background: #f3f3f3 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: visible !important;
+  }
+  
+  .img-wrapper img {
+    width: auto !important;
+    height: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    display: block !important;
+  }
 
 .producto-card h3 {
     margin: 10px 0 5px
