@@ -246,6 +246,143 @@ body {
     text-decoration: none;
     margin-left: 20px
 }
+/*alinear botones */
+  /* Tarjeta de producto: flex column para controlar posición del botón */
+  .producto-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(16, 24, 40, 0.06);
+    min-height: 420px; /* ajustá a lo que necesites */
+    overflow: hidden;
+  }
+  
+  /* Wrapper de imagen con altura fija para que todas sean iguales */
+  .img-wrapper {
+    width: 100%;
+    height: 160px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 14px;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* recorta la imagen sin deformar */
+    display: block;
+  }
+  
+  /* Título y párrafo: control de espaciado */
+  .producto-card h3 {
+    margin: 6px 0 10px;
+    font-size: 1.05rem;
+  }
+  
+  .producto-card p {
+    margin: 0 0 12px;
+    line-height: 1.45;
+    color: #666;
+    /* permitimos que el párrafo ocupe el espacio disponible,
+       empujando el botón hacia abajo */
+    flex: 1 1 auto;
+  }
+  
+  /* Botón: se empuja al fondo con margin-top: auto; estilo limpio */
+  .producto-card button {
+    margin-top: auto;          /* empuja el botón hacia abajo */
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+    background: #6a28ff;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(106, 40, 255, 0.14);
+    transition: transform .12s ease, box-shadow .12s ease;
+    align-self: center;        /* centra el botón horizontalmente */
+    position: relative;        /* evita pseudoelementos que se proyecten */
+  }
+  
+  /* Evitar outlines/pseudo elementos visibles alrededor del botón */
+  .producto-card button:focus,
+  .producto-card button:active {
+    outline: none;
+    box-shadow: 0 8px 18px rgba(106, 40, 255, 0.18);
+  }
+  
+  /* Si seguís viendo ese "pill" blanco abajo, forzamos que no haya pseudoelementos */
+  .producto-card button::after,
+  .producto-card button::before {
+    content: none;
+  }
+  
+  /* Responsive: en pantallas más chicas pasar a 2/1 columnas */
+  @media (max-width: 1100px) {
+    .productos-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 600px) {
+    .productos-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* ---------- Reseñas: tarjetas iguales y footer abajo --------- */
+  .reseñas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    align-items: stretch;
+    margin: 18px 0 40px;
+  }
+  
+  .reseña {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* texto arriba, footer abajo */
+    background: #fff;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 6px 14px rgba(16, 24, 40, 0.06);
+    min-height: 150px;
+    position: relative;
+  }
+  
+  .reseña p {
+    margin: 0 0 12px;
+    color: #333;
+    line-height: 1.4;
+    flex: 1 1 auto;
+  }
+  
+  /* Footer (nombre) al fondo con estilo de tarjeta */
+  .reseña footer {
+    margin-top: 12px;
+    align-self: flex-start;
+    background: #0b0f1a;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+  }
+  
+  /* Responsive reseñas */
+  @media (max-width: 1100px) {
+    .reseñas-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .reseñas-grid { grid-template-columns: 1fr; }
+  }
+  
 
 /* RESPONSIVE */
 @media(max-width:900px) {
